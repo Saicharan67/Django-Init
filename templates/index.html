@@ -12,30 +12,30 @@
 
     <!-- Google Fonts -->
     <link
-      href="{ % static 'https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i' %}"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="{% static https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css %}"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
 
     <!-- Libraries CSS Files -->
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet" />
-    <link href="lib/hover/hover.min.css" rel="stylesheet" />
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'lib/magnific-popup/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'lib/hover/hover.min.css' %}" rel="stylesheet" />
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 
     <!-- Responsive css -->
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" />
+    <link rel="icon" href="{ % static 'images/favicon.png' %}" />
   </head>
 
   <body>
@@ -309,7 +309,7 @@
           <div class="row skills-content">
             <div class="col-lg-6">
               <div class="progress">
-                <span class="skill">HTML <i class="val">80%</i></span>
+                <span class="skill">{{dest1.name}}<i class="val">{{dest1.percent}}%</i></span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -596,19 +596,19 @@
     <!-- End section footer -->
 
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/typed/typed.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' % }"></script>
+    <script src="{% static 'lib/magnific-popup/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
 
     <!-- Contact Form JavaScript File -->
-    <script src="contactform.js"></script>
-    <script src="lib/typed/typed.js"></script>
+    <script src="{% static 'contactform.js' %}"></script>
+    <script src="{% static 'lib/typed/typed.js' %}"></script>
     <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
-    <script src="lib/waypoints/jquery.waypoints.min.js"></script>
+    <script src="{% static 'js/main.js' % }"></script>
+    <script src="{% static 'lib/waypoints/jquery.waypoints.min.js' %}"></script>
   </body>
 </html>
