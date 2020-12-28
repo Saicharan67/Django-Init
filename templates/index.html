@@ -72,6 +72,13 @@
             <span class="typed"> </span>
           </h1>
           <p>A Technophile and Web Developer</p>
+          {%if user.is_authenticated %}
+          <li>Hello, {{user.first_name}}</li>
+          <a href="accounts/logout">logout</a>
+          {% else %}
+          <a href="accounts/register">Register</a>
+          <a href="accounts/login">Login</a>
+          {% endif %}
           <div class="middle">
             <a
               class="b"
@@ -374,7 +381,7 @@
 
             <div class="col-lg-6">
               <form
-                action="https://formspree.io/mbjzqyde"
+                action="#"
                 method="POST"
                 role="form"
                 class="contactForm"
